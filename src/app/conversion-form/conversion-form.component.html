@@ -1,0 +1,53 @@
+<div class = "container">
+  <h2>Shawn's Currency Converter</h2>
+  <form [formGroup]="currencyConverter" id="currencyConverterBox">
+    <div class = "row">
+      <div class = "col-md-2"></div>
+      <div class = "col-md-8">
+        <p class="smallText">
+          1 {{this.currencyConverter.controls['fromRate'].value.name}} equals
+        </p>
+        <p class="bigText">
+          {{this.currencyConverter.controls['conversionRate'].value}} {{this.currencyConverter.controls['toRate'].value.name}}
+        </p>
+      </div>
+      <div class = "col-md-2"></div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-2"></div>
+      <div class = "col-md-8">
+        <div *ngIf="currencyConverter.get('fromAmount').hasError('pattern') || currencyConverter.get('fromAmount').hasError('required')" class="alert alert-danger" role="alert">
+          <p>Invalid Input</p>
+        </div>
+      </div>
+      <div class = "col-md-2"></div>
+    </div>
+    <div  class="form-group">
+      <div class = "row">
+        <div class = "col-md-2"></div>
+        <div class = "col-md-4">
+          <input style="text-align:right;" type="text" class="form-control" id="fromAmount" formControlName="fromAmount" (keypress)="updateValues()">
+          <input style="text-align:right;" [attr.disabled]="true" type="text" class="form-control"  id="toAmount" formControlName="toAmount" (keypress)="updateValues()">
+        </div>
+        <div class = "col-md-4">
+          <select id="fromRate" class="form-control" formControlName="fromRate" (change)="updateChart()">
+            <option *ngFor="let c of countryCodes" [ngValue]="c">{{ c.cc }} - {{ c.name }}</option>
+          </select>
+          <select id="toRate" class="form-control" formControlName="toRate" (change)="updateChart()">
+            <option *ngFor="let c of countryCodes" [ngValue]="c">{{ c.cc }} - {{ c.name }}</option>
+          </select>
+        </div>
+        <div class = "col-md-2"></div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "col-md-2"></div>
+      <div class = "col-md-8" >
+        <canvas id="currencyChangeChart" width="728" height="400"></canvas>
+        <br>
+        <p  id="centerText">Developed by Shawn Dhaliwal, using Angular4 <br> Some currency conversions may be too small <br> Coming soon to <a href = "https://github.com/shawndha/angular4-currencyconverter" target="_blank">github</a> </p>
+      </div>
+      <div class = "col-md-2"></div>
+    </div>
+  </form>
+</div>

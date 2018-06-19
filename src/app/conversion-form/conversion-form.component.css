@@ -1,0 +1,44 @@
+/*@media (max-width: 1319px) and (min-width: 1091px) {
+  #currencyChangeChart{
+    width: 587px !important;
+  }
+}*/
+/*
+@media screen and (max-width: 1091px) and (min-width: 800px)  {
+  #currencyChangeChart{
+    right: 0px !important;
+    width: 656px !important;
+  }
+}
+
+@media screen and (max-width: 799px)  {
+  #currencyChangeChart{
+    right: 0px !important;
+    width: 200px !important;
+  }
+}*/
+
+#currencyConverterBox{
+  border-color:rgba(255, 99, 132, 1);
+  border-style: solid;
+  border-radius: 10px;
+  padding: 40px;
+  border-width: 1px;
+  margin-top: 28px;
+}
+#centerText{
+  text-align: center;
+}
+#currencyChangeChart{
+  position: relative;
+  left: 13px;
+}
+
+h2, p{
+  font-family: monospace;
+}
+
+.bigText{
+  font-size: 20px;
+  font-weight: bold;
+}
