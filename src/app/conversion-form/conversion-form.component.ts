@@ -48,7 +48,7 @@ export class ConversionFormComponent implements AfterViewInit, OnInit {
     const month = todaysDate.getMonth() + 1;
     const dateFormatted: string = todaysDate.getFullYear() + '-' + month + '-' + todaysDate.getDate();
     // TODO make get request from last 5 days only
-    const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=57c41219-45dc-4614-988a-7ab20c416f3f&date=2018-01-01&endDate=' + dateFormatted;
+    const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=f&date=2018-01-01&endDate=' + dateFormatted;
     let dataGather: number[] = [];
     let dateGather: String[] = [];
     // TODO Make into service
@@ -91,7 +91,7 @@ export class ConversionFormComponent implements AfterViewInit, OnInit {
   // end chartjs code
   // executes when user updates numbers
   updateValues() {
-    const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=57c41219-45dc-4614-988a-7ab20c416f3f';
+    const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=';
     // TODO Make into service
     // get conversion rate and do conversion, set form values
     this.http.get(getUrl, { responseType: 'json' }).subscribe(result => {
