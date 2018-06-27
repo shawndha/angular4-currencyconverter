@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # CurrencyConverter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0.
@@ -32,3 +33,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 Code coming soon..
 Bugs being fixed..
 >>>>>>> 1e9a65b080ccc687f16069cb32e75bfa74888fab
+=======
+Bugs being fixed..
+>>>>>>> 60d81c53c91e1870c268ac324dc9190d280d2089

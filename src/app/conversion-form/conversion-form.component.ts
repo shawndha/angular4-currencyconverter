@@ -52,7 +52,11 @@ export class ConversionFormComponent implements AfterViewInit, OnInit {
     const month = todaysDate.getMonth() + 1;
     const dateFormatted: string = todaysDate.getFullYear() + '-' + month + '-' + todaysDate.getDate();
     // TODO make get request from last 5 days only
+<<<<<<< HEAD
     const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=&date=2018-01-01&endDate=' + dateFormatted;
+=======
+    const getUrl = 'https://www.currencyconverterapi.com/api/v5/convert?q=' + this.currencyConverter.controls['fromRate'].value.cc + '_' + this.currencyConverter.controls['toRate'].value.cc + '&compact=y&apiKey=f&date=2018-01-01&endDate=' + dateFormatted;
+>>>>>>> 60d81c53c91e1870c268ac324dc9190d280d2089
     let dataGather: number[] = [];
     let dateGather: String[] = [];
     // TODO Make into service
